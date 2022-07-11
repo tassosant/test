@@ -3,7 +3,7 @@
      * PDO Database Class
      * Connect to database
      * Create prepared statements
-     * Blind values
+     * Bind values
      * Return rows and results
      */
      class Database{
@@ -18,7 +18,7 @@
 
         public function __construct(){
             // Set DSN
-            $dsn = 'mysql:host'.$this->host.';dbname='.$this->dbname;
+            $dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname;
             $options = array(
                 PDO::ATTR_PERSISTENT => true,
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
