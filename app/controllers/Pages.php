@@ -5,9 +5,16 @@
         }
         
         public function index(){
+            $posts = $this->postModel->getPosts();
             //$this->view('hello'); //must die bec view.php does not exist
             //$this->view('pages/index', ['title' => 'Welcome']); // array ['title'(key) => 'Welcome' (value)]
-            $data = ['title'=> 'Welcome'];
+            $data = [
+                'title'=> 'Welcome',
+                'posts'=> $posts
+            ];
+            
+            
+
             $this->view('pages/index', $data);
         }
 
