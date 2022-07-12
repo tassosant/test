@@ -1,4 +1,4 @@
-<?php class Post{
+<?php /* class Post{
     private $db;
 
     public function __construct(){
@@ -11,4 +11,4 @@
 
         return $this->db->resultSet();
     }
-}
+}*/
